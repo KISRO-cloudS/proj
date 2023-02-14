@@ -132,8 +132,11 @@
 	<form method="post" class="card">
 
 		{% csrf_token %}
+		
 	    <h6 class="text-center">| Log In</h6>
+		
 		{% for field in form %}
+		
 	    		{{ field.label_tag }} 
 	        	{{ field }}
 	        	{% if field.errors %}
