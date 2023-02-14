@@ -30,7 +30,7 @@ SECRET_KEY = 'h%0_nn_#qrk513ojy63vudj4a)kb_^e==_tu41#roz+td^n4j1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['wiseface.up.railway.app','127.0.0.1']
 
 
 # Application definition
@@ -42,15 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     'accounts',
     'crispy_forms',
     'design',
     'chat',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
     'ckeditor',
     'payments',
    
@@ -99,8 +94,12 @@ WSGI_APPLICATION = 'solvex.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'ta0AxfXP74ryc5FhfEiv',
+        'HOST': 'containers-us-west-53.railway.app',
+        'PORT': '6391',
     }
 }
 

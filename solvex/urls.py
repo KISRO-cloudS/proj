@@ -121,7 +121,7 @@ urlpatterns = [
 
 
     path('logout/',logout,name='logout'),
-    path('account/', include('allauth.urls')),
+   
 
     path('searchprofile/',Searchprofile,name='searchprofile'),
 
