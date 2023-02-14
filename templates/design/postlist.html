@@ -105,7 +105,9 @@
 
 
 	<p><form action="{% url 'search' %}" id="form" role="search" method="get" >
+	
 	{% csrf_token %}
+	
   <input type="text" id="query" name="query"
    placeholder=" Search..."
    aria-label="Search through site content">
