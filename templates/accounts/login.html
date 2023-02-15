@@ -131,7 +131,7 @@
 <div class="center">
 	<form method="post" class="card">
 	    <h6 class="text-center">| Log In</h6>
-		
+		{% csrf_token %}
 		{% for field in form %}
 	    		{{ field.label_tag }} 
 	        	{{ field }}
