@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required 
 from .forms import UserRegistrationForm
+from django.views.decorators.csrf import csrf_protect
 
 
 def register(request):
