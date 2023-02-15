@@ -30,7 +30,7 @@ SECRET_KEY = 'h%0_nn_#qrk513ojy63vudj4a)kb_^e==_tu41#roz+td^n4j1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wiseface.up.railway.app','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
