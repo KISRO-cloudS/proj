@@ -26,7 +26,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from itertools import chain
 from django.views.decorators.csrf import csrf_protect
 
-
+@csrf_protect
 def follow_unfollow_profile(request):
 	if request.method=="POST":
 		my_profile = Profile.objects.get(user=request.user)
@@ -124,7 +124,7 @@ def CountNotifications(request):
 
 
 
-
+@csrf_protect
 def Searchprofile(request):
 	if request.method == 'GET':
 		query = request.GET.get('query')
@@ -138,7 +138,7 @@ def Searchprofile(request):
 
 
 
-
+@csrf_protect
 def Search(request):
 	if request.method == 'GET':
 		query = request.GET.get('query')
@@ -169,7 +169,7 @@ def landing_page(request):
 
 
 @login_required
-
+@csrf_protect
 def reportform(request):
 	if request.method == 'POST':
 		form = ReportForm(request.POST, request.FILES)
@@ -210,6 +210,7 @@ def about_us(request):
 
 # PROFILE EDITING
 @login_required
+@csrf_protect
 def prof_edit(request):
 
     if request.method == 'POST':
@@ -269,6 +270,7 @@ def solutionpost (request, pk):
 
 
 @login_required
+@csrf_protect
 def solution(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	comments=Comment.objects.filter(post=post)
@@ -310,6 +312,7 @@ def commentpost (request, pk):
 
 
 @login_required
+@csrf_protect
 def comment(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	comments=Comment.objects.filter(post=post, user= request.user)
@@ -373,6 +376,7 @@ def likepost (request, pk):
 	return render(request,'design/like.html',context)
 
 @login_required
+@csrf_protect
 def like(request, pk):
 
 
@@ -401,6 +405,7 @@ def twoA(request):
 # POSTS SYSTEM
 
 @login_required
+@csrf_protect
 def postdetail(request):
 	post = get_object_or_404(Post )
 	if request.method == "POST":
@@ -445,7 +450,7 @@ def postlist(request):
 
 
 @login_required
-
+@csrf_protect
 def postform(request):
 	p = Profile.objects.get(user=request.user)
 	if request.method == 'POST':
@@ -472,8 +477,8 @@ def postform(request):
 
 # PROFILE Update 
 @login_required
+@csrf_protect
 def profile(request):
-
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST,
