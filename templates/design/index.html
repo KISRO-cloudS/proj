@@ -92,39 +92,6 @@
   </div>
 </div>
 <h1>.</h1>
-<center>
-
-
-	<p><form action="{% url 'search' %}" id="form" role="search" method="get" >
-	{% csrf_token %}
-  <input type="text" id="query" name="query"
-   placeholder=" Search..."
-   aria-label="Search through site content">
-  <button type="submit">Search</button>
-</form></p>
-<hr>
-
-<a href="{% url 'postlist'  %}" class="notificationContainer" title="Home" data-toggle="tooltip" ><h4><i class="fa fa-home fa-3px"></i></h4></a>
-
-<a href="{% url 'notification' %}" class="notificationContainer" title="Notification" data-toggle="tooltip" ><h4><i class="fa fa-bell"></i></h4>
-	<span class="notificationBadge">{{count_notifications}}</span>
-
-</a>
-
-
-<a href="{% url 'twoA' %}" class="notificationContainer" title="Solutions" data-toggle="tooltip" ><h4><i class="fa fa-plus-square"></i></h4></a>
-
-
-<a href="{% url 'profile' %}" class="notificationContainer" title=" Edit-Profile" data-toggle="tooltip" ><h4><i class="fa fa-user" ></i></h4></a>
-
-
-<a href="{% url 'landing_page' %}" class="notificationContainer" title="Logout" data-toggle="tooltip" ><h4><i class="ti-power-off"></i></h4></a>
-
-
-</center>
-<hr>
-
-
 
 
 <section>
@@ -141,10 +108,10 @@
 							<div class="baner-mockup">
 								<img src="{% static 'images/resources/ni.png' %}" alt="">
 							</div>
-							<div class="baner-inf">
-								<span style="color: blue; font: sans-serif;">wana solve?</span>
+							<center><div class="baner-inf" style="padding-bottom: 400px">
+								<h1 style="color: blue">wana solve?</h1>
 								<a href="{% url 'landing_page' %}" title="" style="background-color: green; color: white">start Now</a>
-							</div>
+							</div></center>
 						</div>	
 					</div>
 				</div>
@@ -239,5 +206,8 @@
 
 </body>
 </html>
+
+
+
 
 
