@@ -57,7 +57,7 @@ zeroA,
 
 postform,
 
-
+google6c2c5052a0b56372,
 
 like,
 
@@ -137,6 +137,7 @@ urlpatterns = [
 
      path('following/', following, name='following'),
       path('followers/', followers, name='followers'),
+	  path('google6c2c5052a0b56372,/', google6c2c5052a0b56372,, name='google6c2c5052a0b56372,'),
 
     path('userp/<str:username>/', userp, name='userp'),
 
