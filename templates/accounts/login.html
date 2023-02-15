@@ -130,10 +130,9 @@
 								{%block content%}
 <div class="center">
 	<form method="post" class="card">
+	    <h6 class="text-center">| Log In</h6>
 		
 		{% csrf_token %}
-	
-	    <h6 class="text-center">| Log In</h6>
 		
 		{% for field in form %}
 		
