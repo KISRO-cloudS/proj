@@ -24,6 +24,7 @@ from django.core.paginator import Paginator
 
 from django.views.generic import TemplateView, ListView, DetailView
 from itertools import chain
+from django.views.decorators.csrf import csrf_protect
 
 
 def follow_unfollow_profile(request):
