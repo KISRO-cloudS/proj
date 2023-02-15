@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
 ]
 
-CSRF_TRUSTED_ORIGINS = ['wiseface.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://wiseface.up.railway.app']
 SECURE_CROSS_ORIGIN_OPENER_POLICY ='same-origin-allow-popups'
 
 MIDDLEWARE = [
