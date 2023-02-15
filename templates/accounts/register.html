@@ -128,7 +128,7 @@
 <p>
 	
 </p>
-									 <h5 class="" style="color: blue"><i class="" ></i>Wiseface</h5></center>
+									 <h5 class="" style="color: rgb(38, 95, 418)"><i class="" ></i>Wiseface</h5></center>
 <hr>
 
 								{%block content%}
@@ -136,6 +136,7 @@
 	<form method="post" class="card">
 
 		{% csrf_token %}
+		
 	    <h6 class="text-center">| Register</h6>
 		{% for field in form %}
 	    		{{ field.label_tag }} 
@@ -150,8 +151,7 @@
 			<hr>
 									                         				<div class="button-box">
 				<div id="btn"></div>
-					<												<
-				<a href="{% url 'login' %}"><b type="button" class="toggle-btn" id="log" onclick="login()" style="color: rgb(28, 195, 218)">| LogIn</b></a> 
+				<a href="{% url 'login' %}"><b type="button" class="toggle-btn" id="log" onclick="login()" style="color: rgb(38, 95, 418)">| LogIn</b></a> 
 				
 
 									
