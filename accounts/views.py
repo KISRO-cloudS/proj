@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserRegistrationForm
 from django.views.decorators.csrf import csrf_protect
 
-
+@csrf_protect
 def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
