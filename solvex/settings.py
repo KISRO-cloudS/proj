@@ -14,12 +14,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import environ
 import os
-
-# Initialise environment variables
-env = environ.Env()
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'h%0_nn_#qrk513ojy63vudj4a)kb_^e==_tu41#roz+td^n4j1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = ['wiseface.up.railway.app']
 
@@ -99,15 +94,14 @@ WSGI_APPLICATION = 'solvex.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':env('ENGINE'),
-        'NAME':env('NAME'),
-        'USER': env('USER'),
-        'PASSWORD': env('PASSWORD'),
-        'HOST': env('HOST')',
-        'PORT':env('PORT'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'ta0AxfXP74ryc5FhfEiv',
+        'HOST': 'containers-us-west-53.railway.app',
+        'PORT': '6391',
     }
 }
-
 
 # render postgredb (live)
 
@@ -174,14 +168,15 @@ LOGIN_REDIRECT_URL = 'postlist'
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
 # email configs
-EMAIL_BACKEND = env('EMAIL_BACKEND')
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_USE_TLS = env('EMAIL_USE_TLS')
-EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kcollino39@gmail.com'
+EMAIL_HOST_PASSWORD = 'kqkjqodsrsvldfbi'
+
+
 
 
 #EMAIL_HOST = 'smtp.gmail.com'
