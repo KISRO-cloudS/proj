@@ -26,8 +26,7 @@ from django.views.generic import TemplateView, ListView, DetailView
 from itertools import chain
 from django.views.decorators.csrf import csrf_protect
 
-def google6c2c5052a0b56372 (request):
-	return render(request,'design/google6c2c5052a0b56372.html',{})
+
 	
 
 @csrf_protect
