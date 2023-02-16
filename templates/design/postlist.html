@@ -190,17 +190,7 @@
 
 
 		</div>
-<div class="alert alert-success" role="alert">
 
-
-
-
-	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are Posts
-
-<div id="paypal-button-container"></div>
-
-
-		</div>
 
 
 <h5 style="background-color: white; padding: 20px">
@@ -256,7 +246,17 @@
 
 	<a href="{% url 'postform' %}" ><center ><b style="color:rgb(143, 150, 153); background-color: whitesmoke; border-radius: 12px " class=""><h1><i class="fa fa-edit"></i></h1> <h6>Post your problem...</h6></b></center></a></h1>
 
+<div class="alert alert-success" role="alert">
 
+
+
+
+	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are Posts
+
+<div id="paypal-button-container"></div>
+
+
+		</div>
 
 
                                 {% for post in var %}
@@ -295,10 +295,10 @@
 													<h2><article style="padding: 10px">
 												<p><big><b>&nbsp;&nbsp;problem: </b> </big><a>{{ post.problem }}</a></p>
 
-												<p><h6 style="color: black">&nbsp;&nbsp;{{post.title}}</h6></p>
+														<p><h6 style="color: black">&nbsp;&nbsp;{{post.title}}</h6></p></br>
 
 
-												<p><big><b>&nbsp;&nbsp;Issue:  </big><a  style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;{{post.A_brief_Discription|safe }}</h6></p>
+												<big><b>&nbsp;&nbsp;Issue:  </big><a  style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;{{post.A_brief_Discription|safe }}</h6>
 
                                              </article>
 
