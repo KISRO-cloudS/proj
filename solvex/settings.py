@@ -20,6 +20,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -54,8 +55,8 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-CSRF_TRUSTED_ORIGINS = ['https://wiseface.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['https://wiseface.up.railway.app']
 SECURE_CROSS_ORIGIN_OPENER_POLICY ='same-origin-allow-popups'
 
 MIDDLEWARE = [
@@ -88,12 +89,6 @@ TEMPLATES = [
 ]
 
 
-AUTHENTICATION_BACKENDS =[
-
-'django.contrib.auth.backends.ModelBackend',
-'allauth.account.auth_backends.AuthenticationBackend',
-
-]
 
 WSGI_APPLICATION = 'solvex.wsgi.application'
 
@@ -112,6 +107,7 @@ DATABASES = {
     }
 }
 
+# render postgredb (live)
 
 
 # Password validation
@@ -149,6 +145,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -182,3 +179,10 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kcollino39@gmail.com'
 EMAIL_HOST_PASSWORD = 'kqkjqodsrsvldfbi'
+
+
+
+
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_PORT = 25
+#EMAIL_USE_TLS = True
