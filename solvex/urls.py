@@ -117,9 +117,6 @@ follow_unfollow_profile,
 
 	)
 
-    )
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
 
