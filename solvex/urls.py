@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+<<<<<<< HEAD
+=======
+from django.contrib.sitemaps.views import sitemap
+
+
+>>>>>>> ef39251 (initial commit)
 
 from django.contrib.auth import views as auth_views
 
@@ -43,6 +49,18 @@ from django.contrib.auth.views import (
     PasswordResetCompleteView
 )
 
+<<<<<<< HEAD
+=======
+from design.sitemap import StaticSitemap, PostSitemap, CommentSitemap #import StaticSitemap
+ 
+ 
+sitemaps = {
+    'static':StaticSitemap, #add StaticSitemap to the dictionary
+    'post':PostSitemap,
+    'comment':CommentSitemap, #add DynamicSitemap to the dictionary
+}
+
+>>>>>>> ef39251 (initial commit)
 
 from design.views import (
 
@@ -98,11 +116,25 @@ ProfileListView,
 ProfileDetailView,
 follow_unfollow_profile,
 
+<<<<<<< HEAD
 	)
+=======
+    )
+>>>>>>> ef39251 (initial commit)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+<<<<<<< HEAD
+=======
+    path('sitemap.xml', sitemap, {'sitemaps': {'post' : PostSitemap }},
+    name='django.contrib.sitemaps.views.sitemap'),
+
+    path('sitemap.xml', sitemap, {'sitemaps': {'comment' : CommentSitemap}},
+    name='django.contrib.sitemaps.views.sitemap'),
+
+
+>>>>>>> ef39251 (initial commit)
      path('pay/', Pay, name='pay'),
 
      path('payment_completed/', payment_completed, name='payment-completed'),
@@ -137,7 +169,11 @@ urlpatterns = [
 
      path('following/', following, name='following'),
       path('followers/', followers, name='followers'),
+<<<<<<< HEAD
 	 
+=======
+     
+>>>>>>> ef39251 (initial commit)
 
     path('userp/<str:username>/', userp, name='userp'),
 
@@ -194,5 +230,10 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
+<<<<<<< HEAD
 	urlpatterns += static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
 	urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+=======
+    urlpatterns += static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+>>>>>>> ef39251 (initial commit)

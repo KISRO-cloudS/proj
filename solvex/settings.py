@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ef39251 (initial commit)
 """
 Django settings for webmodel project.
 
@@ -30,7 +33,11 @@ SECRET_KEY = 'h%0_nn_#qrk513ojy63vudj4a)kb_^e==_tu41#roz+td^n4j1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['wiseface.up.railway.app']
+=======
+ALLOWED_HOSTS = ['*']
+>>>>>>> ef39251 (initial commit)
 
 
 # Application definition
@@ -42,6 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+=======
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+>>>>>>> ef39251 (initial commit)
     'accounts',
     'crispy_forms',
     'design',
@@ -52,6 +64,11 @@ INSTALLED_APPS = [
 
 ]
 
+<<<<<<< HEAD
+=======
+SITE_ID = 1
+
+>>>>>>> ef39251 (initial commit)
 CSRF_TRUSTED_ORIGINS = ['https://wiseface.up.railway.app']
 SECURE_CROSS_ORIGIN_OPENER_POLICY ='same-origin-allow-popups'
 
