@@ -151,18 +151,25 @@
 		</div>
 
 
+<div class="alert alert-success" role="alert">
 
+
+
+
+	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are Search Results
+
+<div id="paypal-button-container"></div>
 
 
 		</div>
 
 
 <h5 style="background-color: white; padding: 20px">
-
+	
 	                        <div class="submit-btns">
 
 									<a href="{% url 'profile-list-view' %}">
-												<button class="mtr-btn " type="button" ><span><h5>Follow Now</h5></span></button>
+												<button class="mtr-btn " type="button" ><span><h5>Help Now</h5></span></button>
 											</a>
 
 											<h7 class=""><a href="{% url 'following' %}">Helping: </a>{{profile.following.count}}</h7> <i style="color: blue">|</i>
@@ -170,24 +177,24 @@
 
 
 
-
+								
 							</div>
 
 
 
-
+											
 											<hr><br>
 
 	{% if user.profile.profile_image %}
      <p><a href="{% url 'userp' username=user %}"  data-toggle="tooltip" ><i class=""><img style=" height: 190px;width: 200px; border-radius: 100%"src="{{ user.profile.profile_image.url }}" alt="{{ user.username}}"></i></a>
      	</p>
-
+     	
 
    {% endif %}
 
 
-
-   <a><i><b style="color: rgb(0, 140, 255)"><img  src="{% static 'images/resources/ar.png' %}" alt="">Slug:</b> <i style="color: grey">{{user.profile.my_slug}}</i></i></b>
+   
+   <a><i><b style="color: rgb(0, 140, 255)">Slug:</b> <i style="color: grey">{{user.profile.my_slug}}</i></i></b>
 
    </a>
 
@@ -203,16 +210,16 @@
 </h5>
 
 
-<hr>
+
 
 
 <h1 style="background-color: white; padding-bottom: 10px;padding-top: 10px">
 
 	<a href="{% url 'postform' %}" ><center ><b style="color:rgb(143, 150, 153); background-color: whitesmoke; border-radius: 12px " class=""><h1><i class="fa fa-edit"></i></h1> <h6>Post your problem...</h6></b></center></a></h1>
 
+  
 
                       
-                               
                                 {% for post in var %}
 
 
@@ -241,18 +248,18 @@
 
 
 
-												<a href="{% url 'userp' username=post.author %}"> <br>&nbsp;&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span><h2 class="account-heading">&nbsp;{{post.author}}</h2></span><small style="color: grey">&nbsp;&nbsp;{{post.created_on|timesince}} ago</small>
+												<a href="{% url 'userp' username=post.author %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><sp><h6 style="color: grey">{{post.created_on|timesince}} ago</h6></sp>
 											</div>
 
 
 
 													<h2><article style="padding: 10px">
-												<p><big><b>&nbsp;&nbsp;problem: </b> </big><a>{{ post.problem }}</a></p>
+												<p><big><b>problem: </b> </big><a>{{ post.problem }}</a></p>
 
-												<p><h6 style="color: black">&nbsp;&nbsp;{{post.title}}</h6></p>
+												<p><h6 style="color: black">{{post.title}}</h6></p>
 
 
-												<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></p>
+												<p><big><b>Issue: </b> </big><a  style=" overflow-wrap:break-word ;"><h6 style="color: grey">{{post.A_brief_Discription|safe }}</h6></p>
 
                                              </article>
 
@@ -263,7 +270,6 @@
 											</div>
 											<div class="post-meta">
 										<figure>
-
 
 
 										{% if post.clip_type_html == "image" %}
@@ -474,7 +480,5 @@
 
 </body>
 </html>
-
-
 
 
