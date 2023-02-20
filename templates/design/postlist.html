@@ -1,8 +1,8 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
@@ -15,73 +15,9 @@
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'css/so.css' %}">
     <link rel="stylesheet" href="{% static 'css/note.css' %}">
-     <link rel="stylesheet" href="{% static 'css/spinner.css' %}">
-
-
-<style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-   #content {
-        margin: 0 auto;
-        width: 100%;
-       
-    }  
-
-</style>
 </head>
-<body onload="myFunction()" style="margin:0;">
-
-
- 
-<div id="loader">
-	
-</div>
-
-<div style="display:none;" id="content" class="animate-bottom">
-  <div class="se-pre-con"></div>
+<body style="background:whitesmoke">
+<div class="se-pre-con"></div>
 <div class="theme-layout">
 	<div class="responsive-header">
 		<div class="mh-head first Sticky">
@@ -100,16 +36,12 @@
 
 		</div>
 	</div>
-	<a><i>Welcome:</b> <i style="color: grey">{{user.username}}</i></i></b>
 	<h1>.</h1>
-	
 <center>
 
 
 	<p><form action="{% url 'search' %}" id="form" role="search" method="get" >
-	
 	{% csrf_token %}
-	
   <input type="text" id="query" name="query"
    placeholder=" Search..."
    aria-label="Search through site content">
@@ -152,45 +84,10 @@
 						<div class="row merged20" id="page-contents">
 							<div class="col-lg-3">
 								<aside class="sidebar static left">
-									
-									<div class="widget">
-									
-						<!-- recent activites -->
-									<div class="widget stick-widget">
-										<h4 class="widget-title">I like You :</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="{{ user.profile.profile_image.url }}" alt="{{ user.username}}"></figure>
-												<div class="friend-meta">
-													<h4><a title="">{{user.username}}</a></h4>
-
-
-													
-												</div>
-
-											</li>
-										
-											</li>
-										
-										<span>wiseface</span>
-										</ul>
-									</div>
-												<div class="widget">
-										<h4 class="widget-title"> Please:</h4>
-										<ul class="activitiez">
-											<li>
-												<div class="alert alert-success" role="alert">
-													<center><h2> donate now </h2></center>
-													<div id="paypal-button-container"></div>
-												</div>
-											</li>
-									
-										</ul>
-									</div>
-
+								
 								</aside>
 							</div><!-- sidebar -->
-
+ 
 
 
 
@@ -200,7 +97,7 @@
 
 
 
-
+		
 
 
 <div>
@@ -220,44 +117,57 @@
 		</div>
 
 
+<div class="alert alert-success" role="alert">
 
+<center><h2> donate now </h2></center>
+<div id="paypal-button-container"></div>
+
+
+		</div>
+<div class="alert alert-success" role="alert">
+
+
+
+
+	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are Posts
+
+<div id="paypal-button-container"></div>
 
 
 		</div>
 
 
-
 <h5 style="background-color: white; padding: 20px">
-
+	
 	                        <div class="submit-btns">
 
 									<a href="{% url 'profile-list-view' %}">
 												<button class="mtr-btn " type="button" ><span><h5>Follow Now</h5></span></button>
 											</a>
 
-											<h7 class=""><a href="{% url 'following' %}">Helping: </a>{{profile.following.count}}</h7> <i style="color: blue">|</i>
-											<h7 class=""><a href="{% url 'followers' %}">Helpers: </a>{{profile.user.following.count}}</h7>
+											<h7 class=""><a href="{% url 'following' %}">Following: </a>{{profile.following.count}}</h7> <i style="color: blue">|</i>
+											<h7 class=""><a href="{% url 'followers' %}">Followers: </a>{{profile.user.following.count}}</h7>
 
 
 
-
+								
 							</div>
 
 
 
-
+											
 											<hr><br>
 
 	{% if user.profile.profile_image %}
      <p><a href="{% url 'userp' username=user %}"  data-toggle="tooltip" ><i class=""><img style=" height: 190px;width: 200px; border-radius: 100%"src="{{ user.profile.profile_image.url }}" alt="{{ user.username}}"></i></a>
      	</p>
-
+     	
 
    {% endif %}
 
 
-
-   <a><i><b style="color: rgb(0, 140, 255)"><img  src="{% static 'images/resources/ar.png' %}" alt="">Slug:</b> <i style="color: grey">{{user.profile.my_slug}}</i></i></b>
+   
+   <a><i><b style="color: rgb(0, 140, 255)">Slug:</b> <i style="color: grey">{{user.profile.my_slug}}</i></i></b>
 
    </a>
 
@@ -273,26 +183,16 @@
 </h5>
 
 
-<hr>
+
 
 
 <h1 style="background-color: white; padding-bottom: 10px;padding-top: 10px">
 
 	<a href="{% url 'postform' %}" ><center ><b style="color:rgb(143, 150, 153); background-color: whitesmoke; border-radius: 12px " class=""><h1><i class="fa fa-edit"></i></h1> <h6>Post your problem...</h6></b></center></a></h1>
 
-<div class="alert alert-success" role="alert">
+  
 
-
-
-
-	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are Posts
-
-<div id="paypal-button-container"></div>
-
-
-		</div>
-
-
+                      
                                 {% for post in var %}
 
 
@@ -321,17 +221,18 @@
 
 
 
-												<a href="{% url 'userp' username=post.author %}"> <br>&nbsp;&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span><h2 class="account-heading">&nbsp;{{post.author}}</h2></span><small style="color: grey">&nbsp;&nbsp;{{post.created_on|timesince}} ago</small>
+												<a href="{% url 'userp' username=post.author %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><sp><h6 style="color: grey">{{post.created_on|timesince}} ago</h6></sp>
 											</div>
 
 
 
 													<h2><article style="padding: 10px">
-												<p><big><b>&nbsp;&nbsp;problem: </b> </big><a>{{ post.problem }}</a></p>
+												<p><big><b>problem: </b> </big><a>{{ post.problem }}</a></p>
 
-														<p><h6 style="color: black">&nbsp;&nbsp;{{post.title}}</h6></p>
-<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></p>
-												
+												<p><h6 style="color: black">{{post.title}}</h6></p>
+
+
+												<p><big><b>Issue: </b> </big><a  style=" overflow-wrap:break-word ;"><h6 style="color: grey">{{post.A_brief_Discription|safe }}</h6></p>
 
                                              </article>
 
@@ -471,6 +372,10 @@
 			</div>
 		</div>	
 	</section>
+</div>
+</div>
+
+
 
 
 			<footer>
@@ -531,35 +436,12 @@
 				</div>
 			</div>
 		</footer>
-</div>
-</div>
-<p>
-	<hr>
-</p>
-<p>
-	<hr>
-</p>
-
-								<center><a href="#" title=""><img  style="height: 60px ;border-radius:1000px" src="{% static 'images/resources/t.png' %}" alt=""></a>
-								</center>
 
 
-</div>
 
-<script>
-var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("content").style.display = "block";
-}
-</script>
 
-		<script src="{% static 'js/spinner.js' %}"></script>
 	<script src="{% static 'js/main.min.js' %}"></script>
 	<script src="{% static 'js/script.js' %}"></script>
 	<script src="{% static 'js/map-init.js' %}"></script>
@@ -621,22 +503,11 @@ function showPage() {
               .render("#paypal-button-container")
               .catch((err) => {
                   console.error('PayPal Buttons failed to render');
-
               });
 
-
-
-
 </script>
-
-
-
-
-
+      
+      
 
 </body>
 </html>
-
-
-
-
