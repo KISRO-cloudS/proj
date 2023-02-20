@@ -179,14 +179,14 @@
 			<form action="{% url 'follow-unfollow-view' %}" method="POST">
 				{% csrf_token %}
 				<input type="hidden" name="profile_pk" value="{{object.pk}}">
-				<button type="submit" class="ui negative button" style="background-color: red">unfollow</button>
+				<button type="submit" class="ui negative button" style="background-color: red">unhelp</button>
 				
 			</form>
 			{% else %}
 			<form action="{% url 'follow-unfollow-view' %}" method="POST">
 				{% csrf_token %}
 				<input type="hidden" name="profile_pk" value="{{object.pk}}">
-				<button type="submit" class="ui negative button">follow</button>
+				<button type="submit" class="ui negative button">help</button>
 				
 			</form>
 
