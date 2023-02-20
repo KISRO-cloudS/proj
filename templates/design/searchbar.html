@@ -248,7 +248,7 @@
 
 
 
-												<a href="{% url 'userp' username=post.author %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><sp><h6 style="color: grey">{{post.created_on|timesince}} ago</h6></sp>
+												<a href="{% url 'userp' username=post.author %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><small style="color: grey">{{post.created_on|timesince}} ago</small>
 											</div>
 
 
@@ -259,7 +259,8 @@
 												<p><h6 style="color: black">{{post.title}}</h6></p>
 
 
-												<p><big><b>Issue: </b> </big><a  style=" overflow-wrap:break-word ;"><h6 style="color: grey">{{post.A_brief_Discription|safe }}</h6></p>
+											<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{x.A_brief_Discription|safe }}</h6></a></p>
+												
 
                                              </article>
 
