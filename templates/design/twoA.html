@@ -132,40 +132,7 @@
 						<div class="row merged20" id="page-contents">
 							<div class="col-lg-3">
 								<aside class="sidebar static left">
-									<div class="widget">
-									
-						<!-- recent activites -->
-									<div class="widget stick-widget">
-										<h4 class="widget-title">I like You :</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="{{ user.profile.profile_image.url }}" alt="{{ user.username}}"></figure>
-												<div class="friend-meta">
-													<h4><a title="">{{user.username}}</a></h4>
-
-
-													
-												</div>
-
-											</li>
-										
-											</li>
-										
-										<span>wiseface</span>
-										</ul>
-									</div>
-												<div class="widget">
-										<h4 class="widget-title"> Please:</h4>
-										<ul class="activitiez">
-											<li>
-												<div class="alert alert-success" role="alert">
-													<center><h2> donate now </h2></center>
-													<div id="paypal-button-container"></div>
-												</div>
-											</li>
-									
-										</ul>
-									</div>
+								
 								</aside>
 							</div><!-- sidebar -->
 <!-- centerl meta -->
@@ -228,7 +195,7 @@
 
 
 												<a href=""> <br>&nbsp;&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{ user.profile.profile_image.url }}"  alt="{{ user.username}}"></br></a> <span> <h2 class="account-heading">&nbsp;{{user.username }}</h2></span>
-												<sp><h6 style="color: grey">&nbsp;&nbsp;{{x.created_on|timesince}} ago</h6></sp>
+											<small style="color: grey">&nbsp;&nbsp;{{x.created_on|timesince}} ago</small>
 											</div>
 
 <article style="padding: 5px">
@@ -243,7 +210,7 @@
 												{{x.title}}</h6></p>
 
 
-												<p><big><b>&nbsp;&nbsp;Issue:  </big><a  style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;{{x.A_brief_Discription|safe }}</h6></p>
+												<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{x.A_brief_Discription|safe }}</h6></a></p>
 												</article>
 
                                              </article>
