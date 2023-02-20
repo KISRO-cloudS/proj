@@ -182,8 +182,8 @@
    {% endif %}
 
 
-   
-   <a><i><b style="color: rgb(0, 140, 255)">Slug:</b> <i style="color: grey">{{user.profile.my_slug}}</i></i></b>
+   <p><span><img  src="{% static 'images/resources/ar.png' %}" alt="">Slug </span>: {{user.profile.my_slug}}</p>
+ 
 
    </a>
 
@@ -248,7 +248,7 @@
 												<p><h6 style="color: black">{{post.title}}</h6></p>
 
 
-											<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{x.A_brief_Discription|safe }}</h6></a></p>
+											<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></p>
 												
 
                                              </article>
