@@ -205,9 +205,7 @@
 
 
 
-	<a href="{% url 'userp' username=post.user %}"> <br>&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.user.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><small style="color: grey">&nbsp;&nbsp;{{post.created_on|timesince}} ago</small>
-
-
+	<p><a href="{% url 'userp' username=user %}"  data-toggle="tooltip" ><i class=""><img style=" height: 190px;width: 200px; border-radius: 100%"src="{{ user.profile.profile_image.url }}" alt="{{ user.username}}"></i></a>
 
 													<article style="padding: 10px">
 
