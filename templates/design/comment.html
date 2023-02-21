@@ -124,29 +124,28 @@
 <hr>
 
 
-
 <section>
 		<div class="gap2 gray-bg">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-16">
+					<div class="col-lg-12">
 						<div class="row merged20" id="page-contents">
 							<div class="col-lg-3">
 								<aside class="sidebar static left">
-									
 								</aside>
 							</div><!-- sidebar -->
+<!-- centerl meta -->
 
 
 							<div class="col-lg-6">
 
 																<div class="alert alert-success" role="alert">
+			
 
-
-
-
-<p ><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Help From The Form Below .  </b></h7></p>
-
+	
+		
+<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Help From The Form Below .  </b></h7></center></p>
+			
 
 
 
@@ -154,99 +153,100 @@
 
 
 
-								<div class="central-met">
-									<div class="new-postbo">
+								<div class="central-meta">
+									<div class="new-postbox">
 
-										 <h5 class="f-title"><i class=""></i> &nbsp;&nbsp;&nbsp;&nbsp;Help Form</h5>
-
+										&nbsp;&nbsp; <h5 class="f-title"><i class=""></i> Help Form</h5>
+										
 										<form method="post" enctype="multipart/form-data">
 										 {% csrf_token %}
-
-										  <table>{{ comment_form.media}} </table>
-
-                                         <table>  {{ comment_form.as_p}} </table>
-											
-                                           <p><input type="submit" value="Post" class="btn btn-primary"></p>
+										 
+                                         <table> &nbsp;&nbsp; &nbsp;&nbsp; {{ comment_form.as_table}} </table>
+                                           <center><input type="submit" value="Post" class="btn btn-primary"></center>
                                           </form>
-
+                                    
 									</div>
 
 
 
 
+									
 
 
 
-
-
+									
 								</div>
 
-<hr>
 
+	
+							
+							
+        {% for post in comments %}
+   
 
-      
-                                {% for post in comments %}
-
-
-
+								
 								<div class="central-meta">
-<h6 style="color: grey">&nbsp;&nbsp; &nbsp;&nbsp;Solution#</h6>
+<h7 style="color: grey">&nbsp;&nbsp; Help*</h7>
 									<div class="user-post">
 
 										<div class="friend-info">
+											
+											<div class="friend-name">
+
+
+											  	
+												
 
 
 
+                                                
+												<a href="{% url 'userp' username=post.author %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><span>{{post.created_on}}</span>	
+											</div>
+
+											
+
+
+											<div class="coment-area">
+										<ul class="we-comet">
+											
+										</ul>
+									</div>
 											<div class="description">
 
-
+											
 										<div class="description">
 
-										    	<div class="friend-name">
+												
+									
+												<p><a>&nbsp;&nbsp;description:</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{post.Help|linebreaksbr}}</p>
+												
+                                                 
 
-
-
-
-
-	<a href="{% url 'userp' username=post.user %}"> <br>&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.user.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><small style="color: grey">&nbsp;&nbsp;{{post.created_on|timesince}} ago</small>
-
-
-
-													<article style="padding: 10px">
-
-
-														<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{post.Help|safe }}</h6></a></p>
-
-
-
-                                             </article>
-
-
-
-
+                                             
 
 											</div>
 											<div class="post-meta">
 										<figure>
 
-{% if post.clip_type_html == "image" %}
+
+										{% if post.clip_type_html == "image" %}
 										<figure>
-											<img src="{{ post.clip.url }}" alt="img" style="width: 100%  max-width: 400px ; height: auto;" >
+											<img src="{{ post.clip.url }}" alt="img" style="  width: 900px ; height: 700px;" >
 										</figure>
-
-
-
+										
+										    
+										
 										    {% elif post.clip_type_html == "video" %}
 										<figure>
 											  <video controls style=" width: 100% ; height: auto;">
 
 										    	<source src="{{ post.clip.url }}">
-
+										    	
 										    </video>
 										</figure>
-
-
-
+										  
+										
+										    
 												{% endif %}
 
 												</figure>
@@ -254,104 +254,103 @@
 													<ul>
 
 														<li>
-
+															
 														</li>
 
 
+														<li>	
+
+
+														
+
+      
+
+  
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+																
+    
+															
+
+
+															
+														</li>
+														
 														<li>
 
 
 
 
 
+															
+														
+															
+													
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+															
 														</li>
-
-														<li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-														</li>
-
-
+													
+													                            
                             <td>
+                            	
+                            	
 
 
-
-
-
+                            	
 													</ul>
-
+													
 
 												</div>
-
+												
 											</div>
 										</div>
-
-
+										
+										
 									</div>
-
+								
 								</div><!-- add post new box -->
 
 
+								
+								
+								
 
 
 
 
 
 
-
-
-
-
+			
 
 							</div>
 
 
-
+		
 
 							{% endfor %}
 
 
-
-								
+								<!-- add post new box-->
 							</div><!-- centerl meta -->
-						</div>
+						</div>	
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 	</section>
 
 
