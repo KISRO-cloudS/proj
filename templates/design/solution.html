@@ -188,19 +188,14 @@
 
 
 
-	<a href="{% url 'userp' username=post.user %}"> <br>&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.user.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><small style="color: grey">&nbsp;&nbsp;{{post.created_on|timesince}} ago</small>
-
-<div class="friend-meta">
-													<h4><a title="">{{user.username}}</a></h4>
+	<a href="{% url 'userp' username=post.user %}"> <br>&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.user.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.user}}</h2></span><small style="color: grey">&nbsp;&nbsp;{{post.created_on|timesince}} ago</small>
 
 
-													
-												</div>
 
 													<article style="padding: 10px">
 
 
-														<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{post.Help|safe }}</h6></a></p>
+														<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Solution : </b> {{post.Help|safe }}</h6></a></p>
 
 
 
