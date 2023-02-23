@@ -227,18 +227,18 @@
 
 
 
-												<a href="{% url 'userp' username=post.author %}"> <br>&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">&nbsp;{{post.author}}</h2></span><small style="color: grey">&nbsp;{{post.created_on|timesince}} ago</small>
+												<a href="{% url 'userp' username=post.author %}"> <br>&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">&nbsp;{{post.author}}</h2></span><small style="color: grey">&nbsp;{{post.created_on|timesince}} ago</small></br>
 											</div>
 
 
 
 													<h2><article style="padding: 10px">
-												<p><big><b>&nbsp;problem: </b> </big><a>{{ post.problem }}</a></p>
+												<big><b>&nbsp;problem: </b> </big><a>{{ post.problem }}</a></br>
 
-												<p><h6 style="color: black">&nbsp;{{post.title}}</h6></p>
+												<h6 style="color: black">&nbsp;{{post.title}}</h6></br>
 
 
-												<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></p>
+												<a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></br>
 												
 
                                              </article>
