@@ -288,7 +288,7 @@
 
     <form action="{% url 'like' post.pk %}" method="post" name="like" id="likeform">
         {% csrf_token %}
-        <button type='submit' name='like' value="{{post.pk}}" class="btn btn-outline-info  btn-sm" ><h4><i class="fa fa-heart" style="color:red  background-color:grey" > Care</c></i></h4></button>
+        <button type='submit' name='like' value="{{post.pk}}" class="btn btn-outline-info  btn-sm" ><h7><i class="fa fa-heart" style="color:red  background-color:grey" > Care</c></i></h7></button>
         <i style="color: grey">{{post.total_likes}}</i>
     </form>
 
@@ -318,7 +318,7 @@
 
 														  <form action="{% url 'comment' post.pk %}" method="post" name="like" id="likeform">
         {% csrf_token %}
-        <button type='submit' name='like' value="{{ post.pk }}" class="btn btn-outline-info  btn-sm" ><h4><i class="fa fa-ambulance" style="color:red  background-color:grey" > Help</c></i></h4></button>
+        <button type='submit' name='like' value="{{ post.pk }}" class="btn btn-outline-info  btn-sm" ><h7><i class="fa fa-ambulance" style="color:red  background-color:grey" > Help</c></i></h7></button>
 
     </form>
 
