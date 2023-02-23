@@ -194,23 +194,23 @@
 										    		<div class="friend-name">
 
 
-												<a href=""> <br>&nbsp;&nbsp;&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{ user.profile.profile_image.url }}"  alt="{{ user.username}}"></br></a> <span> <h2 class="account-heading">&nbsp;{{user.username }}</h2></span>
-											<small style="color: grey">&nbsp;&nbsp;{{x.created_on|timesince}} ago</small>
+												<a href=""> <br>&nbsp;;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{ user.profile.profile_image.url }}"  alt="{{ user.username}}"></br></a> <span> <h2 class="account-heading">&nbsp;{{user.username }}</h2></span>
+											<small style="color: grey">&nbsp;{{x.created_on|timesince}} ago</small>
 											</div>
 
 <article style="padding: 5px">
 
-<p>	<a href="{% url 'solution' x.pk  %}"><b style=" color:grey" class="profile-edit-btn" ><h3>&nbsp;&nbsp;<i class="fa fa-square"></i> Solution Square</h3></b></a></p>
+<p>	<a href="{% url 'solution' x.pk  %}"><b style=" color:grey" class="profile-edit-btn" >&nbsp;<h3><i class="fa fa-square"></i> Solution Square</h3></b></a></p>
 
 
 											<h2><article style="padding: 5px">
-												<p><big><b>&nbsp;&nbsp;problem: </b> </big><a>{{ x.problem }}</a></p>
+												<p><big><b>&nbsp;problem: </b> </big><a>{{ x.problem }}</a></p>
 
 												<p><h6 style="color: black">&nbsp;
 												{{x.title}}</h6></p>
 
 
-												<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{x.A_brief_Discription|safe }}</h6></a></p>
+												<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;<b style="color: white-grey">Issue : </b>&nbsp; {{x.A_brief_Discription|safe }}</h6></a></p>
 												</article>
 
                                              </article>
