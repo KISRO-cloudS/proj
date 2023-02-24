@@ -198,7 +198,7 @@
 
 
 							<h2><article style="padding: 10px">
-								<p><a href="{% url 'userp' username=x.author %}"> <br>&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{x.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">&nbsp;{{x.author}}</h2></span><small style="color: grey">&nbsp;{{x.created_on|timesince}} ago</small></p>
+								
 								<p><a href="{% url 'solution' x.pk  %}"><b style=" color:grey" class="profile-edit-btn" ><h3>&nbsp;<i class="fa fa-square"></i> Solution Square</h3></b></a></p>
 												<p><big><b>&nbsp;problem: </b> </big><a>{{ x.problem }}</a></p>
 
