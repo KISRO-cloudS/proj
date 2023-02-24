@@ -193,7 +193,16 @@
 
 										<div class="description">
 
-				
+				   	<div class="friend-name">
+
+
+
+
+
+
+
+												<a href="{% url 'userp' username=x.author %}"> <br>&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{x.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">&nbsp;{{x.author}}</h2></span><small style="color: grey">&nbsp;{{x.created_on|timesince}} ago</small>
+											</div>
 	
 
 
