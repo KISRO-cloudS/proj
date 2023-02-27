@@ -1,6 +1,7 @@
 
 
 
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -94,36 +95,8 @@
   </div>
 </div>
 <h1>.</h1>
-<center>
 
 
-	<p><form action="{% url 'search' %}" id="form" role="search" method="get" >
-	{% csrf_token %}
-  <input type="text" id="query" name="query"
-   placeholder=" Search..."
-   aria-label="Search through site content">
-  <button type="submit">Search</button>
-</form></p>
-<hr>
-
-<a href="{% url 'postlist'  %}" class="notificationContainer" title="Home" data-toggle="tooltip" ><h4><i class="fa fa-home fa-3px"></i></h4></a>
-
-<a href="{% url 'notification' %}" class="notificationContainer" title="Notification" data-toggle="tooltip" ><h4><i class="fa fa-bell"></i></h4>
-	<span class="notificationBadge">{{count_notifications}}</span>
-
-</a>
-
-
-<a href="{% url 'twoA' %}" class="notificationContainer" title="Solutions" data-toggle="tooltip" ><h4><i class="fa fa-plus-square"></i></h4></a>
-
-
-<a href="{% url 'profile' %}" class="notificationContainer" title=" Edit-Profile" data-toggle="tooltip" ><h4><i class="fa fa-user" ></i></h4></a>
-
-
-<a href="{% url 'landing_page' %}" class="notificationContainer" title="Logout" data-toggle="tooltip" ><h4><i class="ti-power-off"></i></h4></a>
-
-
-</center>
 <hr>
 
 
@@ -134,7 +107,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-{% for x in b %}
+
 
 		<div class="alert alert-success" role="alert">
 			
@@ -151,11 +124,11 @@
 
 
 						<div class="">
-							<h4><b>Welcome to Solvex</b></h4>
-							<span>{{x.main_description}}</p>
+							<h4><b>Welcome to Wiseface</b></h4>
+							<span><p>wiseface is a free website where people meet and solve different kinds of challenges that come their way as one family through sharing mind and experience to each other, Ashraf Kisoro efacLutaaya took this simple idea and built it into a Problem solver plateform inorder to make you happy life, thank you for choosing wiseface</p>
 							<div class="fonder">
 								<h4>Ashraf Kisoro Lutaaya <i>Co-founder</i></h4>
-								<i>solvex community</i>
+								<i>Wiseface Family</i>
 							</div>	
 						</div>
 					</div>
@@ -181,26 +154,20 @@
 					<div class="row merged">
 						<div class="col-lg-4 col-md-6">
 							<div class="category-box">
-								<h2>{{x.service_title}}</h2>
-								<p>{{x.service_description}}</p>
+								<h2>Posting Challenges</h2>
+								<p>people with different kinds of challenges post them on wiseface to find solutions to those kinds of challenges around the world</p>
 								
 							</div>
 						</div>
 
 							<div class="col-lg-4 col-md-6">
 							<div class="category-box">
-								<h2>{{x.service_title2}}</h2>
-								<p>{{x.service_description2}}</p>
+								<h2>Helping People</h2>
+								<p>different kinds of post appear on wiseface for people who need your help, therefore helping people out is what builds us to a better world together</p>
 								
 							</div>
 						</div>
 
-							<div class="col-lg-4 col-md-6">
-							<div class="category-box">
-								<h2>{{x.service_title3}}</h2>
-								<p>{{x.service_description3}}</p>
-								
-							</div>
 						</div>
 
 						
@@ -233,44 +200,55 @@
 
 					<div class="col-lg-3 col-sm-6">
 						<div class="our-teambox">
-							<figure><img src="{{x.team_member_image1.url}}" alt=""></figure>
+							<figure><img src="{% static 'images/resources/to.jpeg' %}"alt=""></figure>
 							<div class="team-info">
-								<h4>{{x.team_member_name1}}</h4>
-								<span>{{x.team_member_role1}}</span>
+								<h4>Lutaaya Ashraf k</h4>
+								<span>Developer</span>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="our-teambox">
-							<figure><img src="{{x.team_member_image2.url}}" alt=""></figure>
-							<div class="team-info">
-								<h4>{{x.team_member_name2}}</h4>
-								<span>{{x.team_member_role2}}</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="our-teambox">
-							<figure><img src="{{x.team_member_image3.url}}" alt=""></figure>
-							<div class="team-info">
-								<h4>{{x.team_member_name3}}</h4>
-								<span>{{x.team_member_role3}}</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6">
-						<div class="our-teambox">
-							<figure><img src="{{x.team_member_image4.url}}" alt=""></figure>
-							<div class="team-info">
-								<h4>{{x.team_member_name4}}</h4>
-								<span>{{x.team_member_role4}}</span>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
-	</section><!-- our team -->
+	</section>
+
+
+
+<section>
+		<div class="gap100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-heading">
+							<p>
+								
+							</p>
+							<h2>Contact Us</h2>
+						</div>
+					</div>	
+
+
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="our-teambox">
+							<div class="team-info">
+								<p>for more info.</p>
+								<h4 style="color: blue">Email :</h4>
+								<span>wiseface3@gmail.com</span>
+								<span>kcollino39@gmail.com</span>
+								<h4 style="color: blue">mobile number :</h4>
+								<span>+256707247381</span>
+								<h4 style="color: blue">all social medias :</h4>
+								<span>wiseface3</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><<!-- our team -->
 	
 
 	
@@ -284,14 +262,14 @@
 								<h2>Sponsors</h2>
 							</div>
 							<ul class="sponsor-logo">
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-									<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
-								<li><img alt="" src="{% static 'images/resources/t.png' %}"></li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+									<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
+								<li><img alt="" src="{% static 'images/resources/t.png' %}">Sponsor now</li>
 
 						
 						
@@ -312,7 +290,7 @@
 	</section><!-- get a quote -->
 
 	
-{% endfor %}
+
 
 
 </div>.
@@ -338,14 +316,13 @@
 								<a href="index-2.html" title=""><img  style="height: 60px ;border-radius:1000px" src="{% static 'images/resources/t.png' %}" alt=""></a>
 								</div>	
 								<p>
-									<p>A place To Meet And Solve</p>
-									Ashraf Kisoro Lutaaya took this simple idea and built it into a Problem solver plateform inorder to make you happy life
+									wiseface is a free website where people meet and solve different kinds of challenges that come their way as one family through sharing mind and experience to each other, Ashraf Kisoro Lutaaya took this simple idea and built it into a Problem solver plateform inorder to make you happy life, thank you for choosing wiseface
 								</p>
 							</div>
 							<ul class="location">
 								<li>
 									<i class="ti-email"></i>
-									<p>Wiseface@gmail.com</p>
+									<p>wiseface3@gmail.com</p>
 								</li>
 							
 							</ul>
@@ -355,11 +332,11 @@
 					<div class="widget">
 						<div class="widget-title"><h4>follow</h4></div>
 						<ul class="list-style">
-							<li><i class="fa fa-facebook-square"></i> <a  title=""> #wiseface</a></li>
-							<li><i class="fa fa-twitter-square"></i><a  title="">#wiseface</a></li>
-							<li><i class="fa fa-instagram"></i><a  title="">#wiseface</a></li>
-							<li><i class="fa fa-google-plus-square"></i> <a >wiseface@gmail.com</a></li>
-							<li><i class="fa fa-pinterest-square"></i> <a  title="">#wiseface</a></li>
+							<li><i class="fa fa-facebook-square"></i> <a  title="">wiseface3</a></li>
+							<li><i class="fa fa-twitter-square"></i><a  title="">wiseface3</a></li>
+							<li><i class="fa fa-instagram"></i><a  title="">wiseface3</a></li>
+							<li><i class="fa fa-google-plus-square"></i> <a >wiseface3</a></li>
+							<li><i class="fa fa-pinterest-square"></i> <a  title="">wiseface3</a></li>
 						</ul>
 					</div>
 				</div>
@@ -395,6 +372,5 @@
 
 </body>	
 </html>
-
 
 
