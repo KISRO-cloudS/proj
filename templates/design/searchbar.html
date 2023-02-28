@@ -188,7 +188,7 @@
 		</div>
 
                       
-                                {% for post in var %}
+                                 {% for post in var %}
 
 
 
@@ -211,23 +211,23 @@
 										    	<div class="friend-name">
 
 
-<h2>Search Results</h2>
 
 
 
 
-												<a href="{% url 'userp' username=post.author %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">{{post.author}}</h2></span><small style="color: grey">{{post.created_on|timesince}} ago</small>
+
+												<a href="{% url 'userp' username=post.author %}"> <br>&nbsp;<img style="border-radius:1000px; height: 50px;width: 50px"src="{{post.author.profile.profile_image.url}}"  alt=""></br></a> <span> <h2 class="account-heading">&nbsp;{{post.author}}</h2></span><small style="color: grey">&nbsp;{{post.created_on|timesince}} ago</small>
 											</div>
 
 
 
 													<h2><article style="padding: 10px">
-												<p><big><b>problem: </b> </big><a>{{ post.problem }}</a></p>
+												<p><big><b>&nbsp;problem: </b> </big><a>{{ post.problem }}</a></p>
 
-												<p><h6 style="color: black">{{post.title}}</h6></p>
+												<p><h6 style="color: black">&nbsp;{{post.title}}</h6></p>
 
 
-											<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></p>
+												<p><a style=" overflow-wrap:break-word ;"><h6 style="color: grey">&nbsp;<b style="color: white-grey">Issue : </b> {{post.A_brief_Discription|safe }}</h6></a></p>
 												
 
                                              </article>
@@ -277,7 +277,7 @@
 
     <form action="{% url 'like' post.pk %}" method="post" name="like" id="likeform">
         {% csrf_token %}
-        <button type='submit' name='like' value="{{post.pk}}" class="btn btn-outline-info  btn-sm" ><h4><i class="fa fa-heart" style="color:red  background-color:grey" > Care</c></i></h4></button>
+        <button type='submit' name='like' value="{{post.pk}}" class="btn btn-outline-info  btn-sm" ><h7><i class="fa fa-heart" style="color:red  background-color:grey" > Care</c></i></h7></button>
         <i style="color: grey">{{post.total_likes}}</i>
     </form>
 
@@ -307,7 +307,7 @@
 
 														  <form action="{% url 'comment' post.pk %}" method="post" name="like" id="likeform">
         {% csrf_token %}
-        <button type='submit' name='like' value="{{ post.pk }}" class="btn btn-outline-info  btn-sm" ><h4><i class="fa fa-ambulance" style="color:red  background-color:grey" > Help</c></i></h4></button>
+        <button type='submit' name='like' value="{{ post.pk }}" class="btn btn-outline-info  btn-sm" ><h7><i class="fa fa-ambulance" style="color:red  background-color:grey" > Help</c></i></h7></button>
 
     </form>
 
