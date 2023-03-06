@@ -133,8 +133,9 @@
               <a href="#">
                   <img src="{{ x.user.profile.profile_image.url }}" alt="">
               </a>
+		  <h3>{{current_user}}  profile</h3>
               <ul>
-                <li> <h1>{{current_user}}  profile</h1></li>
+                
                 <li><p><span><img style=" height: 15px;width: 20px; border-radius: 100%" src="{% static 'images/resources/ce.png' %}" alt=""> From </span>: {{x.country}}</p></li>
                 <li><p><span><img style=" height: 15px;width: 20px; border-radius: 100%"  src="{% static 'images/resources/cd.png' %}" alt=""> solve_of </span>: {{x.solve_of}}</p></li>
               
@@ -148,8 +149,8 @@
   <div class="profile-info col-md-9">
       
           <div class="panel-body bio-graph-info"><br>
-            <center>  <h1>Bio Graph</h1>
-              <h3 style="color: black"> {{x.about_me}}</h3>
+            <center>  <h3>Bio Graph</h3>
+              <h6 style="color: black"> {{x.about_me}}</h6>
                  <hr>
                       <p><span><img style=" height: 15px;width: 20px; border-radius: 100%"  src="{% static 'images/resources/ai.png' %}" alt=""></a> Name </span>:{{current_user}}</p>
               
