@@ -1,10 +1,11 @@
-
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="zSV4HaawKaDOrJ6y1DQcCGMHuoCvKVVtHdY_k5DOZTc" />
 	
@@ -13,120 +14,235 @@
 
 
 	<title>Wiseface</title>
-	<link rel="icon"  href="{% static 'images/resources/t.png' %}"sizes="16x16" alt="">
-
-
-    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/color.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'css/so.css' %}">
-     <link rel="stylesheet" href="{% static 'css/note.css' %}">
-
-
-
-
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+		<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+    
 </head>
-<body style="background:whitesmoke">
 
+<body>
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<div class="logo"><img  src="{% static 'images/resources/t.png' %}" alt="logo"></div>
+			<ul>
+				<li><a class="active" href="">Home</a></li>
+				<li><a href="#contactus_section">More</a></li>
+				<li><a href="#portfolio_section">potifolio</a></li>
+				<li><a href="#team_section">team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
 
-<div class="se-pre-con"></div>
-<div class="theme-layout">
-
-	<div class="responsive-header">
-		<div class="mh-head first Sticky">
-
-			<span class="mh-text">
-				<a href="newsfeed.html" title=""><h1>Wiseface</h1></a>
-			</span>
-
-		</div>
-
-
-		<div class="mh-head second">
-
-		</div>
-
-
-
-
-
-
-
-
-	</div><!-- responsive header -->
-
-	
-
-	<div class="topbar stick">
-		<div class="logo">
-<a title="" ><h1 style="color: blue"><b>Wiseface</b></h1></a>
-
-		</div>
-
-		<div class="top-area">
-			<div class="top-search">
-
-			</div>
-
-		<div class="user-img">
+			</ul>
+			
+			<a class="get-started" href="{% url 'landing_page' %}">Get Started</a>
+		<img src="{% static 'imag1\menu.png ' %}" class="menu"  alt="menu" >
+				</div>
+		</nav>
+		<div class="head-container">
+			<div class="quote">
+				<p>The beautiful thing about overcoming a challenge is that happiness comes within</p>
+				<h5>Life is full of its ups and downs. One day, you may feel like you have it all figured out. Then, in a moment’s notice, you’ve been thrown a curve ball. You’re not alone in these feelings. Everyone has to face their own set of challenges. knowing how to overcome challenges will help you stay centered and remain calm under pressure!</h5><br>
+				<img src=""><span><a href="https://youtu.be/2MGMvEnoD6U" target="_blank">Watch Now</a></span>
+				<br>
+				<button style="width: 100%;height: 50px; background-color: #008CBA; border-radius: 8px;"><center><a href="{% url 'landing_page' %}"><h3 style="color: white ; padding-left: 200px"> Join Now </h3></a> </button><br>
 				
 			</div>
-
-		</div>
-	</div><!-- topbar -->
-
-
-
-
-
-
-
-<!-- right sidebar menu -->
-
-
-
-  </div>
-</div>
-
-
-
-  </div>
-</div>
-<h1>.</h1>
-
-
-<section>
-		
-
-<h1>.</h1>
-
-		<div class="gap no-gap bluesh high-opacity btm-mockup">
-			<div class="content-bg-wrap" style="background: url({% static 'images/resources/ko.png' %})"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="btm-baner">
-							<div class="baner-mockup">
-								<img src="{% static 'images/resources/ni.png' %}" alt="">
-							</div>
-							<center><div class="baner-inf" style="padding-bottom: 400px">
-								<h1 style="color: blue">wana solve?</h1>
-								<a href="{% url 'landing_page' %}" title="" style="background-color: green; color: white">start Now</a>
-							</div></center>
-						</div>	
-					</div>
-				</div>
+			<div class="svg-image">
+				<img src="{% static 'imag1\bo.png' %}" alt="svg">
 			</div>
 		</div>
+<!-- Some Popular Subjects -->
+	<div class="title">
+		<span>Popular Problems people discuss on Wiseface</span>
+	</div>
+	<br><br>
+	<div class="course">
+		<center><div class="cbox">
+			<div class="det"><a href=""><img src="{% static 'imag1\star.png'%}">self care problems</a></div>
+			<div class="det"><a href=""><img src="{% static 'imag1\star.png'%}">health problems</a></div>
+		<div class="det"><a href=""><img src="{% static 'imag1\star.png'%}">academic problems</a></div>
+		<div class="det"><a href=""><img src="{% static 'imag1\star.png'%}">anxiety problems</a></div>
+		<div class="det"><a href=""><img src="{% static 'imag1\star.png'%}">business problems</a></div>
+		<div class="det"><a href=""><img src="{% static 'imag1\star.png'%}">ove and relationship problems</a></div>
+		</div></center>
 	
+	</div>
 
-	</section>
+	
+<div class="diffSection" id="about_section">
+		<center><p style="font-size: 50px; padding: 100px">About Us</p></center>
+		<div class="about-content">
+				<div class="side-image">
+					<img class="sideImage" src="{% static 'imag1\pu.avif' %}">
+				</div>
+				<div class="side-text">
+					<h2> Wiseface </h2>
+					<p>wiseface is a free community website where people meet and solve different kinds of challenges that come their way as one family through sharing mind and experience to each other,</p>
+					
+				</div>
+		</div>
+	</div>
+
+
+
+<!-- PORTFOLIO -->
+	<div class="diffSection" id="portfolio_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p></center>
+		<div class="content">
+			<p>
+				True peace of mind is not contingent upon circumstances. It’s a way of being—a choice to rise above your situation. You have to be a person of peace and choose to live a life of peace, which paradoxically means you have to be ready to encounter difficulty. And the best way I know how to do this is to have practices that prepare you for life’s challenges when—not if—they come.
+			</p>
+		</div>
+	</div>
+	<div class="extra">
+		<p>We're Updating  this data every Week</p>
+		<div class="smbox">
+		<span><center><div class="data">1k</div><div class="det">Members</div></center></span>
+		<span><center><div class="data">40</div><div class="det">Problems We Solve</div></center></span>
+		
+		</div>
+	</div>
+
+
+<!-- TEAM -->
+	<div class="diffSection" id="team_section">
+		<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;"> Creator</p></center>
+		<div class="totalcard">
+			<div class="card">
+				<center><img src="{% static 'imag1\j.png' %}"></center>
+				<center><div class="card-title">Ashraf Kisoro Lutaaya</div>
+				<div id="detail">
+					<p>Ashraf Kisoro Lutaaya took this simple idea and built it into a Problem solver plateform inorder to make you happy life, thank you for choosing wiseface</p>
+					<div class="duty"></div>
+					<a href="#" target="_blank"><button class="btn-roshan">Follow +</button></a>
+				</div>
+				</center>
+			</div>
+		
+	</div>
+
+<!-- SERVICES -->
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+		</div>
+		<a href="#"><div class="s-card"><img src="{% static 'imag1\jo.png' %}"><p>Posting Challenges</p></div></a>
+		<a href="#"><div class="s-card"><img src="{% static 'imag1\to.png' %}"><p>Helping People</p></div></a>
+		<a href="#"><div class="s-card"><img src="{% static 'imag1\ye.png' %}"><p>caring on posts</p></div></a>
+		<a href="#"><div class="s-card"><img src="{% static 'imag1\f.png' %}"><p>Performance and Ranking Report</p></div></a>
+		
+<a href="#"><div class="s-card"><img src="{% static 'imag1\help.png' %}"><p>24x7 Online Support</p></div></a>
+	</div>
+
+<!-- Reviews by Students -->
+<div id="makeitfull">
+	<a href="#review_section"><img src="{% static 'images/resources/t.png' %}" ></a>
+</div>
+<div class="review">
+	<div class="diffSection" id="review_section">
+		<center><p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What People Say</p></center>
+	</div>
+	<div class="rev-container">
+		<div class="rev-card">
+			<div class="identity">
+				<img src="{% static 'imag1\ds.png' %}"><p>Sophie Nakkasi</p>
+				<h6></h6>
+				<div class="rating"><img src="{% static 'images/icon/star.png' %}"><img src="{% static 'images/icon/star.png' %}"><img src="{% static 'images/icon/star.png' %}"><img src="{% static 'images/icon/star.png' %}"><img src="{% static 'images/icon/star.png' %}"></div>
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					The idea mutebi gave me on wiseface of starting meditation as boosted by confidence 100%
+				</p>
+			</div>
+		</div>
+		<div class="rev-card">
+			<div class="identity">
+				<img src="{% static 'imag1\ku.png' %}"><p>Ssempa Sharif</p>
+				
+				
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					My academic performace  increased after i joined Wiseface, all the challenges that put me back my helpers Solve. thanx wiseface.
+				</p>
+			</div>
+		</div>
+		<div class="rev-card">
+			<div class="identity">
+				<img src="{% static 'imag1\nb.png' %}"><p>Wasswa Roni</p>
+				<h6></h6>
+				
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					When I was watching ssembatya solution about the post of "How To Stop Boredom At Home" that i recently posted on wiseface, his idea of stopping me being alone all the time changed my life to happiness
+				</p>
+			</div>
+		</div>
+		<div class="rev-card">
+			<div class="identity">
+				<img src="{% static 'imag1\fd.png' %}"><p>Ssemuyaba Phillips</p>
+				<h6></h6>
+				
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					Wiseface as helped me live an health relationship with my partner through the tips been share on the network
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
 
-<hr>
-<div>
-</div>
+<!-- CONTACT US -->
+	<div class="diffSection" id="contactus_section">
+		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<div class="csec"></div>
+		<div class="back-contact">
+			<div class="cc">
+				<center><p>for more info.</p><br>
+								<h4 style="color: blue">Email :</h4>
+								<span>wiseface3@gmail.com</span>
+								<span>kcollino39@gmail.com</span><br>
+								<h4 style="color: blue">mobile number :</h4>
+								<span>+256707247381</span><br>
+								<h4 style="color: blue">all social medias :</h4>
+								<span>wiseface3</span></center>
+			</div>
+		</div>
+	</div>
+
+
+<!-- FEEDBACK -->
+	<div class="title2" id="feedBACK">
+		<span>Give Feedback</span>
+		<div class="shortdesc2">
+			<p>Please share your valuable feedback to us</p>
+		</div>
+	</div>
+
+	<div class="feedbox">
+		<div class="feed">
+			
+				<a href="{% url 'register' %}"><button type="submit" id="csubmit">Send Message</button></a>
+			
+		</div>
+	</div>
+
+<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); color: white; margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">True peace of mind is not contingent upon circumstances. It’s a way of being—a choice to rise above your situation. You have to be a person of peace and choose to live a life of peace, which paradoxically means you have to be ready to encounter difficulty. And the best way I know how to do this is to have practices that prepare you for life’s challenges when—not if—they come.</div></marquee>
 
 
 
@@ -136,7 +252,7 @@
 
 
 
-		<footer>
+						<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-md-4">
@@ -145,11 +261,11 @@
 								<div class="logo">
 								<a href="index-2.html" title=""><img  style="height: 60px ;border-radius:1000px" src="{% static 'images/resources/t.png' %}" alt=""></a>
 								</div>	
-									<p>
-									wiseface is a free website where people post different kinds of challenges that come their way and find solutions to them ,
-									Ashraf Kisoro Lutaaya took this simple idea and built it into a Problem solver plateform inorder to make you happy life, thank you for choosing wiseface family
+								<p>
+									wiseface is a free website where people meet and solve different kinds of challenges that come their way as one family through sharing mind and experience to each other, Ashraf Kisoro Lutaaya took this simple idea and built it into a Problem solver plateform inorder to make you happy life, thank you for choosing wiseface
 								</p>
 							</div>
+							<div>
 							<ul class="location">
 								<li>
 									<i class="ti-email"></i>
@@ -182,26 +298,21 @@
 					</div>
 				</div>
 					<div class="col-lg-2 col-md-4">
-					<div class="widget">
-						<div class="widget-title"><h4>useful links</h4></div>
-						<ul class="list-style">
+				<div class="widget">
 					
-							<li><a href="{% url 'usage' %}"  title="">Support & Help</a></li>
-							
-						</ul>
-					</div>
 				</div>
 					
 				</div>
 			</div>
 		</footer>
 
-
 	<script src="{% static 'js/main.min.js' %}"></script>
 	<script src="{% static 'js/script.js' %}"></script>
 	<script src="{% static 'js/map-init.js' %}"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
+	<script type="text/javascript" src="{% static 'script.js' %}"></script>
+	<script src="{% static 'https://code.jquery.com/jquery-3.2.1.js' %}"></script>
 
 
 
