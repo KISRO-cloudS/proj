@@ -6,13 +6,7 @@ from django.contrib.sitemaps.views import sitemap
 from design.sitemap import StaticSitemap, PostSitemap, CommentSitemap #import StaticSitemap
 
 from django.conf import settings
-import os
 
-if settings.DEBUG404:
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-         {'document_root': os.path.join(os.path.dirname(__file__), 'static')} ),
-    )
  
  
 sitemaps = {
