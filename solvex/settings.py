@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'h%0_nn_#qrk513ojy63vudj4a)kb_^e==_tu41#roz+td^n4j1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['wiseface.up.railway.app']
