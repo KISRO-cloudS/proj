@@ -163,7 +163,7 @@
 				<center>
 				{% for p in profile.following.all %}
 				<li>
-					<a href="{% url 'userp' username=profile.user %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{profile.user.profile_image.url}}"  alt=""></br></a>
+					<a href="{% url 'userp' username=profile.user %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{profile.p.profile_image.url}}"  alt=""></br></a>
 					{{p}}
 						<a href="{% url 'profile-detail-view' p.pk %} ">
 	<button class="ui primary button" style="color: black"> see profile</button>
