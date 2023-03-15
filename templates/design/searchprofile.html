@@ -148,7 +148,7 @@
 
 
 
-	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are The Profiles Of People To Help .  </b></h7></center></p>
+	<p ><center><h7 style="background-color:; color: rgb(130, 160, 243) "><b> Below Are The Search Results.  </b></h7></center></p>
 
 
 
@@ -163,7 +163,7 @@
 {% for profile in var %}
 
 
-<h2>Search Results</h2>
+
 <div class="ui segment">
 	<a href="{% url 'userp' username=profile.user %}"> <br><img style="border-radius:1000px; height: 50px;width: 50px"src="{{profile.profile_image.url}}"  alt=""></br></a>
 	{{profile}}
